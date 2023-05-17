@@ -27,6 +27,7 @@ echo saludo('Manuel') . '<br />';
 
 // function sumar($numero1, $numero2){
 // 	$resultado = $numero1 + $numero2;
+//
 // 	return $resultado;
 // }
 
