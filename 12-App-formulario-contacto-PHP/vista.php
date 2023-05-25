@@ -11,9 +11,9 @@
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="get"><!--aqui cambiamos de get a post-->
 			<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre:" value="<?php if(!$enviado && isset($nombre)) echo $nombre ?>">
 
-			<input type="email" class="form-control" id="correo" name="correo" placeholder="Correo:" value="">
-			<input type="number" class="form-control" id="telefono" name="telefono" placeholder="telefono:" value="">
-			<textarea name="mensaje" class="form-control" id="mensaje" placeholder="Mensaje:"></textarea>
+			<input type="email" class="form-control" id="correo" name="correo" placeholder="Correo:" value="<?php if(!$enviado && isset($correo)) echo $correo ?>">
+			<input type="number" class="form-control" id="telefono" name="telefono" placeholder="telefono:" value="<?php if(!$enviado && isset($telefono)) echo $telefono ?>">
+			<textarea name="mensaje" class="form-control" id="mensaje" placeholder="Mensaje:" value="<?php if(!$enviado && isset($mensaje)) echo $mensaje ?>"></textarea>
 			<?php if (!empty($errores)): ?>
 				<div class="alert error">
 					<?php echo $errores; ?>
