@@ -1,15 +1,16 @@
 <?php
 require 'errores.php';
 
-echo"Estamos usando el metodo " . ($_SERVER['REQUEST_METHOD']) . "<br>";
-if($_SERVER['REQUEST_METHOD']=='GET'){
 
+if($_SERVER['REQUEST_METHOD']=='GET'){
+    //echo"Estamos usando el metodo " . ($_SERVER['REQUEST_METHOD']) . "<br>";
+    if($enviado==true){
     if(isset($_GET['submit'])){
         echo"Estamos usando el primer submit<br>";
     }else{
         echo"Estamos usando el segundo submit<br>";
     }
-    
+}
     if($_GET!=null){
     // print_r($_GET);
     $nombre=$_GET['nombre'];
@@ -32,12 +33,14 @@ echo"<br>Tu nombre es " . $nombre . ", tu correo es " . $correo . ", tu numero d
 echo"<br>";
     }
 }elseif($_SERVER['REQUEST_METHOD']=='POST'){
+    //echo"Estamos usando el metodo " . ($_SERVER['REQUEST_METHOD']) . "<br>";
+    if($enviado==true){
     if(isset($_POST['submit'])){
         echo"Estamos usando el primer submit<br>";
     }else{
         echo"Estamos usando el segundo submit<br>";
     }
-    
+}
     print_r($_POST);
     if($_POST){
 $nombre=$_POST['nombre'];
