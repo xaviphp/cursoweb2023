@@ -15,11 +15,11 @@
 			<input type="number" class="form-control" id="telefono" name="telefono" placeholder="telefono:" value="">
 			<textarea name="mensaje" class="form-control" id="mensaje" placeholder="Mensaje:"></textarea>
 			<?php if (!empty($errores)): ?>
-				<div>
+				<div class="alert error">
 					<?php echo $errores; ?>
 				</div>
 			<?php elseif($enviado): ?>
-				<div>
+				<div class="alert success">
 					<p>Enviado Correctamente</p>
 				</div>
 			<?php endif ?>

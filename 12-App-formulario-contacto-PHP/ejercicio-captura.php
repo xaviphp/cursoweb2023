@@ -3,7 +3,7 @@ require 'errores.php';
 
 
 if($_SERVER['REQUEST_METHOD']=='GET' && $enviado==true){
-    //echo"Estamos usando el metodo " . ($_SERVER['REQUEST_METHOD']) . "<br>";
+    echo"Estamos usando el metodo " . ($_SERVER['REQUEST_METHOD']) . "<br>";
     if($enviado==true){
     if(isset($_GET['submit'])){
         echo"Estamos usando el primer submit<br>";
@@ -11,7 +11,8 @@ if($_SERVER['REQUEST_METHOD']=='GET' && $enviado==true){
         echo"Estamos usando el segundo submit<br>";
     }
 }
-    if($_GET!=null){
+print_r($_GET);
+    if($_GET){
     // print_r($_GET);
     $nombre=$_GET['nombre'];
     $nombre= trim($nombre); //quita espacios
@@ -32,8 +33,8 @@ $telefono=$_GET['telefono'];
 echo"<br>Tu nombre es " . $nombre . ", tu correo es " . $correo . ", tu numero de telefono es el " . $telefono . " y has escrito " . $mensaje . $telefono;
 echo"<br>";
     }
-}elseif($_SERVER['REQUEST_METHOD']=='POST'){
-    //echo"Estamos usando el metodo " . ($_SERVER['REQUEST_METHOD']) . "<br>";
+}elseif($_SERVER['REQUEST_METHOD']=='POST' && $enviado==true){
+    echo"Estamos usando el metodo " . ($_SERVER['REQUEST_METHOD']) . "<br>";
     if($enviado==true){
     if(isset($_POST['submit'])){
         echo"Estamos usando el primer submit<br>";
