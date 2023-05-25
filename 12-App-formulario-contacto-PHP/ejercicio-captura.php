@@ -2,7 +2,7 @@
 require 'errores.php';
 
 
-if($_SERVER['REQUEST_METHOD']=='GET'){
+if($_SERVER['REQUEST_METHOD']=='GET' && $enviado==true){
     //echo"Estamos usando el metodo " . ($_SERVER['REQUEST_METHOD']) . "<br>";
     if($enviado==true){
     if(isset($_GET['submit'])){

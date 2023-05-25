@@ -3,7 +3,40 @@
 $errores = '';
 $enviado = '';
 
-if (isset($_POST['submit'])) {
+if (isset($_GET['submit'])||isset($_GET['submit2'])) {
+	$nombre = $_GET['nombre'];
+	$correo = $_GET['correo'];
+	$mensaje = $_GET['mensaje'];
+
+	if (!empty($nombre)) {
+
+	} else {
+        
+		$errores .= 'Por favor escribe un nombre <br />';
+	}
+
+	if (!empty($correo)) {
+
+		if(!filter_var($correo, FILTER_VALIDATE_EMAIL)){
+			$errores .= 'Por favor escribe un correo valido <br />';
+		}
+	} else {
+		$errores .= 'Por favor escribe un correo <br />';
+	}
+
+	if(!empty($mensaje)){
+
+	} else {
+		$errores .= 'Por favor escribe el mensaje <br />';
+	}
+
+	if(!$errores){
+		$enviado = 'true';
+	}
+
+}
+
+if (isset($_POST['submit']) ||isset($_POST['submit2'])) {
 	$nombre = $_POST['nombre'];
 	$correo = $_POST['correo'];
 	$mensaje = $_POST['mensaje'];

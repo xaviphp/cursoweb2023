@@ -14,6 +14,16 @@
 			<input type="email" class="form-control" id="correo" name="correo" placeholder="Correo:" value="">
 			<input type="number" class="form-control" id="telefono" name="telefono" placeholder="telefono:" value="">
 			<textarea name="mensaje" class="form-control" id="mensaje" placeholder="Mensaje:"></textarea>
+			<?php if (!empty($errores)): ?>
+				<div>
+					<?php echo $errores; ?>
+				</div>
+			<?php elseif($enviado): ?>
+				<div>
+					<p>Enviado Correctamente</p>
+				</div>
+			<?php endif ?>
+			<br>
             <label for="aceptar-terminos">
     <input type="checkbox" id="aceptar-terminos" name="aceptar-terminos" required>
     Acepto los términos y condiciones
@@ -23,6 +33,8 @@
 			<br>
 			<br>
 			<br>
+			
+
 			<input type="submit" name="submit2" class="btn btn-primary" value="Enviar Correo">
 
 		</form>
