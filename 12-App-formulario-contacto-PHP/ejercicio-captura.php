@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']=='GET' && $enviado==true){
             echo"Estamos usando el segundo submit<br>";
         }
     }
-    // print_r($_GET);
+    print_r($_GET);
     if($_GET){
         // print_r($_GET);
         $nombre=$_GET['nombre'];
@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD']=='GET' && $enviado==true){
                 echo"Estamos usando el segundo submit<br>";
             }
         }
-        // print_r($_POST);
+        print_r($_POST);
         if($_POST){
             $nombre=$_POST['nombre'];
             $nombre= trim($nombre); //quita espacios
