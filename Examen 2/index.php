@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
         //OBSOLETO
         // $nombre=filter_var($nombre, FILTER_SANITIZE_STRING); //Filtros de "saneamiento" retira caracteres que no queremos
 
-        
+        echo 'Tu nombre es ' . $nombre . '<br>';
     } else {
         $errores .= 'Por favor escribe un nombre <br>';
         //$errores = $errores . " más texto concatenado";
@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {//Filtro de "validación" del correo
             $errores .= 'Por favor escribe un correo válido <br>';
         } else {
-            
+            echo 'Tu correo es ' . $email . '<br>';
         }
     } else {
         $errores .= 'Por favor escribe un correo <br>';
