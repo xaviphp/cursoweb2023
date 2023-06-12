@@ -15,7 +15,10 @@
 				<div class="alert success">
 					<p>Enviado Correctamente</p>
 				</div>
-			<?php endif ?>
+			<?php
+            echo 'Tu nombre es ' . $nombre . '<br>';
+            echo 'Tu correo es ' . $email . '<br>';
+             endif ?>
     </form>
 </body>
 </html>
