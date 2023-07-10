@@ -16,6 +16,8 @@ try {
     print_r($resultados); 
 
     
+		echo "<br>" . $resultados['CÓDIGOCLIENTE'] . ' - ' . $resultados['EMPRESA'] . "<br />";
+	
 
 } catch(PDOException $e){
 	// Obtener errores
