@@ -1,3 +1,6 @@
+<?php
+require 'consulta.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,22 +19,9 @@
 		<h1>Búsqueda de registros</h1>
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 			Selecciona el registro a buscar: <select name="id" id="id">
-				<option value=""></option>
-				<option value="CT01">CT01</option>
-				<option value="CT02">CT02</option>
-				<option value="CT03">CT03</option>
-				<option value="CT04">CT04</option>
-				<option value="CT05">CT05</option>
-				<option value="CT06">CT06</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
-				<option value="11">11</option>
-				<option value="12">12</option>
-				<option value="13">13</option>
-				<option value="14">14</option>
-				<option value="15">15</option>
+			<?php foreach ($resultados as $resultado): ?>
+                    <option><?php echo $resultado['CÓDIGOCLIENTE']; ?></option>
+                <?php endforeach; ?>
 			</select>
 			<br>
 			<!-- Ejemplo para muchos registros poner intervalo -->
