@@ -19,8 +19,8 @@ require 'consulta.php';
 		<h1>Búsqueda de registros</h1>
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 			Selecciona el registro a buscar: <select name="id" id="id">
-			<?php foreach ($resultados as $resultado): ?>
-                    <option><?php echo $resultado['CÓDIGOCLIENTE']; ?></option>
+			<?php foreach ($resultadosconsulta as $resultadoconsulta): ?>
+                    <option><?php echo $resultadoconsulta['CÓDIGOCLIENTE']; ?></option>
                 <?php endforeach; ?>
 			</select>
 			<br>
