@@ -1,5 +1,10 @@
 <?php
-$conexion = new PDO('mysql:host=localhost;dbname=gestion', 'root', '');
+try {
+    $conexion = new PDO('mysql:host=localhost;dbname=gestion', 'root', '');
+} catch (\Throwable $th) {
+    echo "Error: " . $e->getMessage();
+}
+
 
 			//Buscar datos del formulario "READ" SQL
 			$statementconsulta = $conexion->query('SELECT CÓDIGOCLIENTE FROM clientes');
